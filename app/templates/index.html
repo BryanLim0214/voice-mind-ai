@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceMind AI - Clinical Mental Health Screening</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Medical Background Pattern -->
+    <div class="medical-background">
+        <div class="medical-pattern"></div>
+        <div class="medical-grid"></div>
+    </div>
+
+    <div class="main-container">
+        <!-- Medical Header -->
+        <header class="medical-header">
+            <div class="header-top">
+                <div class="medical-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>VoiceMind AI</h1>
+                        <span class="medical-subtitle">Clinical Mental Health Screening</span>
+                    </div>
+                </div>
+                <div class="header-status">
+                    <div class="status-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>System Ready</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-description">
+                <p>Advanced AI-powered voice analysis for comprehensive mental health assessment</p>
+                <div class="medical-badges">
+                    <span class="badge"><i class="fas fa-flask"></i> Research Tool</span>
+                    <span class="badge"><i class="fas fa-microscope"></i> AI-Powered</span>
+                    <span class="badge"><i class="fas fa-graduation-cap"></i> Educational</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Clinical Assessment Section -->
+            <section class="clinical-section">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="fas fa-microphone-alt"></i>
+                        <h2>Clinical Voice Assessment</h2>
+                    </div>
+                    <p class="section-description">Record or upload a 60-second audio sample for comprehensive mental health screening</p>
+                </div>
+                
+                <div class="assessment-container">
+                    <!-- File Upload Area -->
+                    <div class="upload-card">
+                        <div class="card-header">
+                            <i class="fas fa-file-upload"></i>
+                            <h3>Upload Audio File</h3>
+                        </div>
+                        <div class="upload-area" id="fileUploadArea">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <div class="upload-content">
+                                <h4>Select an audio file to analyze</h4>
+                                <p>Supported formats: WAV, MP3, FLAC, OGG, WEBM</p>
+                                <div class="supported-formats">
+                                    <span class="format-tag">WAV</span>
+                                    <span class="format-tag">MP3</span>
+                                    <span class="format-tag">FLAC</span>
+                                    <span class="format-tag">OGG</span>
+                                    <span class="format-tag">WEBM</span>
+                                </div>
+                            </div>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="audioFileInput" accept="audio/*" style="display: none;">
+                                <label for="audioFileInput" class="medical-btn primary file-input-label">
+                                    <i class="fas fa-folder-open"></i>
+                                    Choose File
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Divider -->
+                    <div class="clinical-divider">
+                        <div class="divider-line"></div>
+                        <span class="divider-text">OR</span>
+                        <div class="divider-line"></div>
+                    </div>
+                    
+                    <!-- Recording Section -->
+                    <div class="recording-card">
+                        <div class="card-header">
+                            <i class="fas fa-microphone"></i>
+                            <h3>Live Recording</h3>
+                        </div>
+                        <div class="recording-content">
+                            <div class="recording-controls">
+                                <button id="recordButton" class="medical-btn record">
+                                    <i class="fas fa-microphone"></i>
+                                    <span>Start Recording</span>
+                                </button>
+                                <button id="stopButton" class="medical-btn stop" style="display: none;">
+                                    <i class="fas fa-stop"></i>
+                                    <span>Stop Recording</span>
+                                </button>
+                            </div>
+                            
+                            <div class="recording-status" id="recordingStatus" style="display: none;">
+                                <div class="status-indicator">
+                                    <div class="pulse-dot"></div>
+                                    <span>Recording in progress...</span>
+                                </div>
+                                <div class="recording-timer" id="recordingTimer">00:00</div>
+                            </div>
+                            
+                            <div class="waveform-container">
+                                <canvas id="waveformCanvas" width="400" height="120"></canvas>
+                                <div class="time-markers">
+                                    <span>0s</span>
+                                    <span>30s</span>
+                                    <span>60s</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Audio Info -->
+                <div class="audio-info" id="audioInfo" style="display: none;">
+                    <div class="info-card">
+                        <div class="card-header">
+                            <i class="fas fa-info-circle"></i>
+                            <h3>Audio Information</h3>
+                        </div>
+                        <div class="info-content" id="audioDetails"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Clinical Analysis Section -->
+            <section class="analysis-section" id="analysisSection" style="display: none;">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="fas fa-chart-line"></i>
+                        <h2>Clinical Analysis Results</h2>
+                    </div>
+                    <p class="section-description">AI-powered analysis of voice patterns for mental health indicators</p>
+                </div>
+                
+                <!-- Loading State -->
+                <div class="loading-container" id="loadingSpinner">
+                    <div class="loading-animation">
+                        <div class="medical-spinner"></div>
+                        <div class="loading-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="loading-text">
+                        <h3>Analyzing Voice Patterns</h3>
+                        <p>Processing acoustic features and running clinical AI models...</p>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <span class="progress-text">Processing...</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results Display -->
+                <div class="results-container" id="resultsDisplay" style="display: none;">
+                    <div class="results-header">
+                        <div class="results-title">
+                            <i class="fas fa-clipboard-check"></i>
+                            <h3>Clinical Screening Results</h3>
+                        </div>
+                        <div class="confidence-indicator">
+                            <div class="confidence-meter">
+                                <div class="confidence-fill" id="confidenceFill"></div>
+                            </div>
+                            <span class="confidence-label">Confidence:</span>
+                            <span class="confidence-value" id="overallConfidence">--</span>
+                        </div>
+                    </div>
+                    
+                    <div class="disorder-results" id="disorderResults">
+                        <!-- Results will be populated here -->
+                    </div>
+                    
+                    <div class="clinical-report" id="clinicalReport" style="display: none;">
+                        <div class="report-header">
+                            <div class="report-title">
+                                <i class="fas fa-file-medical-alt"></i>
+                                <h4>Clinical Summary Report</h4>
+                            </div>
+                            <div class="report-actions">
+                                <button class="medical-btn secondary" id="downloadReport">
+                                    <i class="fas fa-download"></i>
+                                    Download Report
+                                </button>
+                            </div>
+                        </div>
+                        <div class="report-content" id="reportContent"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Medical Footer -->
+        <footer class="medical-footer">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <div class="footer-title">
+                            <i class="fas fa-stethoscope"></i>
+                            <h4>VoiceMind AI</h4>
+                        </div>
+                        <p>Advanced clinical mental health screening through voice analysis</p>
+                        <div class="footer-badges">
+                            <span class="footer-badge">Research Tool</span>
+                            <span class="footer-badge">Educational</span>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <div class="footer-title">
+                            <i class="fas fa-microscope"></i>
+                            <h4>Clinical Technology</h4>
+                        </div>
+                        <p>Powered by advanced AI models for research and educational purposes</p>
+                        <ul class="tech-list">
+                            <li>eGeMAPS Acoustic Analysis</li>
+                            <li>Multi-Task Learning</li>
+                            <li>Research-Based Models</li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <div class="footer-title">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h4>Medical Disclaimer</h4>
+                        </div>
+                        <p>For research and educational purposes only. Not a replacement for professional medical diagnosis or treatment.</p>
+                        <div class="disclaimer-note">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Always consult qualified healthcare professionals</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 VoiceMind AI. Clinical Research and Educational Purposes.</p>
+                    <div class="footer-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/audio-recorder.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/waveform.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

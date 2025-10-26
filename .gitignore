@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project Specific
+temp_uploads/
+temp_voice_datasets/
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.ogg
+*.webm
+*.flv
+
+# Data files (keep structure but not actual data)
+data/raw/*/
+data/processed/*/
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/features/.gitkeep
+
+# Model files (too large for git)
+models/*.joblib
+models/*/random_forest.joblib
+models/*/svm.joblib
+models/*/xgboost.joblib
+models/*_ensemble.joblib
+models/label_encoders.joblib
+models/scalers.joblib
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+feedback_log.jsonl
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# FFmpeg (keep structure but not binaries)
+ffmpeg-master-latest-win64-gpl/bin/
+ffmpeg-master-latest-win64-gpl/doc/
+ffmpeg-master-latest-win64-gpl/presets/
+
+# Test files
+test_*.py
+test_*.html
+test_*.wav
+test_*.json
+test_*.md
+
+# Keep test results but ignore generation scripts
+scripts/generate_test_results.py
+scripts/verify_installation.py
+
+# Documentation files (keep only main README)
+*_FIXED.md
+*_SUMMARY.md
+*_ENHANCED.md

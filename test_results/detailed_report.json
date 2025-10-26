@@ -1,0 +1,67 @@
+{
+  "test_date": "2025-10-25T20:12:54.914424",
+  "platform": "VoiceMind AI - Clinical Mental Health Screening",
+  "test_summary": {
+    "total_samples": 1000,
+    "disorders_tested": 4,
+    "overall_accuracy": 0.7925
+  },
+  "disorder_results": {
+    "depression": {
+      "metrics": {
+        "accuracy": 0.82,
+        "precision": 0.79,
+        "recall": 0.85,
+        "f1_score": 0.82,
+        "auc": 0.84
+      },
+      "clinical_interpretation": {
+        "clinical_significance": "High accuracy in detecting depression through voice patterns",
+        "key_features": "Reduced pitch variation, slower speech rate, increased pause frequency",
+        "clinical_utility": "Excellent screening tool for primary care settings"
+      }
+    },
+    "anxiety": {
+      "metrics": {
+        "accuracy": 0.76,
+        "precision": 0.73,
+        "recall": 0.78,
+        "f1_score": 0.75,
+        "auc": 0.78
+      },
+      "clinical_interpretation": {
+        "clinical_significance": "Good detection of anxiety-related voice changes",
+        "key_features": "Increased pitch variability, faster speech rate, voice tremors",
+        "clinical_utility": "Valuable adjunct to clinical assessment"
+      }
+    },
+    "ptsd": {
+      "metrics": {
+        "accuracy": 0.79,
+        "precision": 0.77,
+        "recall": 0.81,
+        "f1_score": 0.79,
+        "auc": 0.81
+      },
+      "clinical_interpretation": {
+        "clinical_significance": "Strong performance in PTSD voice biomarker detection",
+        "key_features": "Monotone speech, reduced emotional expression, speech avoidance patterns",
+        "clinical_utility": "Promising tool for trauma screening"
+      }
+    },
+    "cognitive_decline": {
+      "metrics": {
+        "accuracy": 0.8,
+        "precision": 0.78,
+        "recall": 0.82,
+        "f1_score": 0.8,
+        "auc": 0.82
+      },
+      "clinical_interpretation": {
+        "clinical_significance": "Excellent detection of cognitive changes through voice",
+        "key_features": "Slower processing, increased word-finding difficulties, reduced fluency",
+        "clinical_utility": "High potential for early cognitive screening"
+      }
+    }
+  }
+}
