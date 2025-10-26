@@ -223,14 +223,7 @@ For research collaborations or questions:
 - **GitHub Issues**: [Open an issue](https://github.com/BryanLim0214/voice-mind-ai/issues)
 - **Research Inquiries**: Please use GitHub discussions for academic questions
 
-## 🔗 Related Research
-
-- [Voice-based Depression Detection: A Survey](https://ieeexplore.ieee.org/document/8455529) - IEEE paper on voice-based depression detection methods
-- [Acoustic Features for Mental Health Screening](https://www.nature.com/articles/s41598-021-83078-3) - Nature Scientific Reports on acoustic biomarkers
-- [Machine Learning in Mental Health Applications](https://www.frontiersin.org/articles/10.3389/fpsyt.2020.00014/full) - Frontiers in Psychiatry review
-
 ---
 
 **Remember**: This is a research tool for educational purposes only. Always consult qualified healthcare professionals for medical concerns.
 
-*Last updated: January 2025*
