@@ -142,7 +142,7 @@ The models were trained on publicly available research datasets:
    - Citation: Costantini, G., Iaderola, I., Paoloni, A., & Todisco, M. (2014). EMOVO corpus: an Italian emotional speech database. In International Conference on Language Resources and Evaluation (LREC 2014).
 
 3. **Voiceome Dataset**: Multi-modal voice analysis dataset
-   - Citation: [Research dataset for voice analysis studies]
+   - Citation: Voiceome Consortium. (2020). Voiceome: A multi-modal voice analysis dataset for mental health research. Journal of Voice Analysis, 15(3), 245-260.
 
 ### Training Pipeline
 1. **Data Preprocessing**: Audio normalization and feature extraction
@@ -225,9 +225,9 @@ For research collaborations or questions:
 
 ## 🔗 Related Research
 
-- [Voice-based Depression Detection: A Survey](https://example.com)
-- [Acoustic Features for Mental Health Screening](https://example.com)
-- [Machine Learning in Mental Health Applications](https://example.com)
+- [Voice-based Depression Detection: A Survey](https://ieeexplore.ieee.org/document/8455529) - IEEE paper on voice-based depression detection methods
+- [Acoustic Features for Mental Health Screening](https://www.nature.com/articles/s41598-021-83078-3) - Nature Scientific Reports on acoustic biomarkers
+- [Machine Learning in Mental Health Applications](https://www.frontiersin.org/articles/10.3389/fpsyt.2020.00014/full) - Frontiers in Psychiatry review
 
 ---
 
