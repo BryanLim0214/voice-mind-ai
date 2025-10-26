@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 Multi-Disorder Voice Screening Platform
+Copyright (c) 2025 Bryan Lim
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,10 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-CLINICAL DISCLAIMER:
-This software is intended for research and screening purposes only. It is not
-intended to replace professional mental health diagnosis or treatment. Users
-should always consult qualified mental health professionals for clinical
-decisions. The authors and contributors are not responsible for any clinical
-decisions made based on the output of this software.
